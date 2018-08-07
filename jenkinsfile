@@ -1,6 +1,7 @@
 node {
   stage('checkout') {
-    checkout
+    checkout([$class: 'GitSCM', branches: [[name: '*/release-20180807']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: '80729aef-70f0-4b89-8c52-46e7dc8cbb32', url: 'git@github.com:Avan1984/jenkins-pipline.git']]])
+
   }
 
   stage('Maven Build') {
