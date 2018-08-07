@@ -1,0 +1,17 @@
+node {
+  stage('checkout') {
+    checkout
+  }
+
+  stage('Maven Build') {
+    echo "maven build ................"
+  }
+
+  stage ('deploy') {
+    echo "deploy ................"
+  }
+
+  stage('test') {
+    echo "test ................"
+  }
+}
